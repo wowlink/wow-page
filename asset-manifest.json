@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/wowlink/wow-page/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/wowlink/wow-page/static/js/main.077cd568.chunk.js",
+    "main.js.map": "/wowlink/wow-page/static/js/main.077cd568.chunk.js.map",
+    "runtime-main.js": "/wowlink/wow-page/static/js/runtime-main.7dfccc3e.js",
+    "runtime-main.js.map": "/wowlink/wow-page/static/js/runtime-main.7dfccc3e.js.map",
+    "static/js/2.cc421fe7.chunk.js": "/wowlink/wow-page/static/js/2.cc421fe7.chunk.js",
+    "static/js/2.cc421fe7.chunk.js.map": "/wowlink/wow-page/static/js/2.cc421fe7.chunk.js.map",
+    "static/js/3.65d82cb6.chunk.js": "/wowlink/wow-page/static/js/3.65d82cb6.chunk.js",
+    "static/js/3.65d82cb6.chunk.js.map": "/wowlink/wow-page/static/js/3.65d82cb6.chunk.js.map",
+    "index.html": "/wowlink/wow-page/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/wowlink/wow-page/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.cc421fe7.chunk.js.LICENSE.txt": "/wowlink/wow-page/static/js/2.cc421fe7.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/wowlink/wow-page/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7dfccc3e.js",
+    "static/js/2.cc421fe7.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.077cd568.chunk.js"
+  ]
+}
