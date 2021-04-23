@@ -38,7 +38,7 @@ const Home = (): JSX.Element => {
 
   useEffect(() => {
     const convertAndRedirect = async () => {
-      setProgress({ msg: "fetch mappings" });
+      setProgress({ msg: "fetching WowLink lookup 💤💤💤" });
       const fetcher_config: WowLookupFetcherConfig = {
         githubUser: githubUser,
         githubRepository: githubRepo
