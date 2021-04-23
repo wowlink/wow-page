@@ -17,7 +17,7 @@ import {
 import { WowLookupFetcherFactory } from "@wowlink/wow-lookup-fetcher";
 import { WowUrlConverterFactory } from "@wowlink/wow-url-converter";
 
-// http://localhost:3000&wow=github
+// http://localhost:3000?wow=gh
 // window.location.href = "https://github.com";
 
 const useQuery = (): URLSearchParams => {
@@ -26,16 +26,22 @@ const useQuery = (): URLSearchParams => {
 
 const Home = (): JSX.Element => {
   const query = useQuery();
+  // TODO(tianhaoz95): make populating the config a function and then
+  // into a package where default values are defined in one place.
   const wowlink = query.get("wow");
   const devMode = query.get("dev") === "true";
+  const githubUserOr = query.get("gh_user");
+  const githubUser: string = githubUserOr ? githubUserOr : "wowlink";
+  const githubRepoOr = query.get("gh_repo");
+  const githubRepo: string = githubRepoOr ? githubRepoOr : "default-profile";
   const [progress, setProgress] = useState({ msg: "initiation" });
 
   useEffect(() => {
     const convertAndRedirect = async () => {
       setProgress({ msg: "fetch mappings" });
       const fetcher_config: WowLookupFetcherConfig = {
-        githubUser: "wowlink",
-        githubRepository: "default-profile"
+        githubUser: githubUser,
+        githubRepository: githubRepo
       };
       const fetcher: WowLookupFetcher = WowLookupFetcherFactory(
         BuiltInLookupFetcherType.GitHub, fetcher_config);
