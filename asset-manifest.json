@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wow-page/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/wow-page/static/js/main.0a9240c1.chunk.js",
-    "main.js.map": "/wow-page/static/js/main.0a9240c1.chunk.js.map",
+    "main.js": "/wow-page/static/js/main.9806db37.chunk.js",
+    "main.js.map": "/wow-page/static/js/main.9806db37.chunk.js.map",
     "runtime-main.js": "/wow-page/static/js/runtime-main.8263dab3.js",
     "runtime-main.js.map": "/wow-page/static/js/runtime-main.8263dab3.js.map",
     "static/js/2.cc421fe7.chunk.js": "/wow-page/static/js/2.cc421fe7.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.8263dab3.js",
     "static/js/2.cc421fe7.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.0a9240c1.chunk.js"
+    "static/js/main.9806db37.chunk.js"
   ]
 }
