@@ -2,13 +2,23 @@ import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { useLocation, BrowserRouter as Router } from "react-router-dom";
+import {
+  WowLookupFetcher,
+  BuiltInLookupFetcherType,
+  WowLookupFetchRequest,
+  WowLookupFetcherConfig,
+  WowLookupFetchResponse,
+  BuiltInWowUrlConverterType,
+  WowUrlConverter,
+  WowUrlConverterConfig,
+  WowUrlConvertRequest,
+  WowUrlConvertResponse,
+} from "@wowlink/wow-interface";
+import { WowLookupFetcherFactory } from "@wowlink/wow-lookup-fetcher";
+import { WowUrlConverterFactory } from "@wowlink/wow-url-converter";
 
 // http://localhost:3000&wow=github
 // window.location.href = "https://github.com";
-
-const fakeAsync = (milliseconds: number) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds));
-};
 
 const useQuery = (): URLSearchParams => {
   return new URLSearchParams(useLocation().search);
@@ -17,20 +27,40 @@ const useQuery = (): URLSearchParams => {
 const Home = (): JSX.Element => {
   const query = useQuery();
   const wowlink = query.get("wow");
+  const devMode = query.get("dev") === "true";
   const [progress, setProgress] = useState({ msg: "initiation" });
 
   useEffect(() => {
     const convertAndRedirect = async () => {
       setProgress({ msg: "fetch mappings" });
-      await fakeAsync(2000);
-      setProgress({ msg: "redirect 🚀🚀🚀" });
+      const fetcher_config: WowLookupFetcherConfig = {
+        githubUser: "wowlink",
+        githubRepository: "default-profile"
+      };
+      const fetcher: WowLookupFetcher = WowLookupFetcherFactory(
+        BuiltInLookupFetcherType.GitHub, fetcher_config);
+      const fetch_req: WowLookupFetchRequest = {};
+      const fetch_res: WowLookupFetchResponse = await fetcher.fetch(fetch_req);
+      const converter_config: WowUrlConverterConfig = {
+        fetcherResponse: fetch_res
+      };
+      const converter: WowUrlConverter = WowUrlConverterFactory(
+        BuiltInWowUrlConverterType.Basic, converter_config);
+      const converter_req: WowUrlConvertRequest = {
+        wowUrl: wowlink ? wowlink : "",
+      };
+      const converter_res: WowUrlConvertResponse = converter.convert(converter_req);
+      setProgress({ msg: `redirect to ${converter_res.fullUrl} 🚀🚀🚀` });
+      if (!devMode) {
+        window.location.href = converter_res.fullUrl;
+      }
     };
     if (!wowlink) {
-      setProgress({ msg: "wowlink not found 🔥🔥🔥" });
+      setProgress({ msg: "wowlink not found or not valid 🔥🔥🔥" });
       return;
     }
     convertAndRedirect();
-  }, [wowlink]);
+  }, [wowlink, devMode]);
 
   return (
     <div className="App">
@@ -43,6 +73,12 @@ const Home = (): JSX.Element => {
           wowlink &&
           <p>
             WowLink: {wowlink}
+          </p>
+        }
+        {
+          devMode &&
+          <p>
+            In development mode, will not redirect ¯\_(ツ)_/¯
           </p>
         }
         <p>
