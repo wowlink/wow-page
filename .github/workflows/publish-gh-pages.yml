@@ -12,6 +12,10 @@ jobs:
         with:
           node-version: "14"
       - name: Install dependencies
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm install
       - name: Build and push to GitHub pages branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
