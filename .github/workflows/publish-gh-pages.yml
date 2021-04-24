@@ -13,6 +13,8 @@ jobs:
           node-version: "14"
           registry-url: "https://npm.pkg.github.com"
       - name: Install dependencies
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm install
       - name: Build and push to GitHub pages branch
         run: npm run deploy
