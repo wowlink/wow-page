@@ -12,7 +12,10 @@ jobs:
         with:
           node-version: "10.x"
           registry-url: "https://npm.pkg.github.com"
-          scope: "@wowlink"
+      - name: Generate GitHub registry credential file
+        run: |
+          echo "@wowlink:registry=https://npm.pkg.github.com" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PKG_DOWNLOAD_TOKEN }}" >> .npmrc
       - name: Install dependencies
         run: npm install
       - name: Build and push to GitHub pages branch
