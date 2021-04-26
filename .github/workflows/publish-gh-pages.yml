@@ -15,7 +15,6 @@ jobs:
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PKG_DOWNLOAD_TOKEN }}" > .npmrc
           echo "@wowlink:registry=https://npm.pkg.github.com" >> .npmrc
-          cat .npmrc
       - name: Install dependencies
         run: npm install
       - name: Build and push to GitHub pages branch
