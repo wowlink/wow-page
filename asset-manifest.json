@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/wow-page/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/wow-page/static/js/main.9806db37.chunk.js",
-    "main.js.map": "/wow-page/static/js/main.9806db37.chunk.js.map",
-    "runtime-main.js": "/wow-page/static/js/runtime-main.8263dab3.js",
-    "runtime-main.js.map": "/wow-page/static/js/runtime-main.8263dab3.js.map",
-    "static/js/2.cc421fe7.chunk.js": "/wow-page/static/js/2.cc421fe7.chunk.js",
-    "static/js/2.cc421fe7.chunk.js.map": "/wow-page/static/js/2.cc421fe7.chunk.js.map",
-    "static/js/3.65d82cb6.chunk.js": "/wow-page/static/js/3.65d82cb6.chunk.js",
-    "static/js/3.65d82cb6.chunk.js.map": "/wow-page/static/js/3.65d82cb6.chunk.js.map",
+    "main.js": "/wow-page/static/js/main.2b4f66c1.chunk.js",
+    "main.js.map": "/wow-page/static/js/main.2b4f66c1.chunk.js.map",
+    "runtime-main.js": "/wow-page/static/js/runtime-main.471f9f49.js",
+    "runtime-main.js.map": "/wow-page/static/js/runtime-main.471f9f49.js.map",
+    "static/js/2.88fdd717.chunk.js": "/wow-page/static/js/2.88fdd717.chunk.js",
+    "static/js/2.88fdd717.chunk.js.map": "/wow-page/static/js/2.88fdd717.chunk.js.map",
+    "static/js/3.350bbb65.chunk.js": "/wow-page/static/js/3.350bbb65.chunk.js",
+    "static/js/3.350bbb65.chunk.js.map": "/wow-page/static/js/3.350bbb65.chunk.js.map",
     "index.html": "/wow-page/index.html",
     "static/css/main.9d5b29c0.chunk.css.map": "/wow-page/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.cc421fe7.chunk.js.LICENSE.txt": "/wow-page/static/js/2.cc421fe7.chunk.js.LICENSE.txt",
+    "static/js/2.88fdd717.chunk.js.LICENSE.txt": "/wow-page/static/js/2.88fdd717.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/wow-page/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8263dab3.js",
-    "static/js/2.cc421fe7.chunk.js",
+    "static/js/runtime-main.471f9f49.js",
+    "static/js/2.88fdd717.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.9806db37.chunk.js"
+    "static/js/main.2b4f66c1.chunk.js"
   ]
 }
