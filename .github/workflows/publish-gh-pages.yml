@@ -17,5 +17,9 @@ jobs:
           echo "@wowlink:registry=https://npm.pkg.github.com" >> .npmrc
       - name: Install dependencies
         run: npm install
+      - name: Set git information
+        run: |
+          git config --global user.email "tianhaoz@umich.edu"
+          git config --global user.name "Tianhao Zhou"
       - name: Build and push to GitHub pages branch
         run: npm run deploy
