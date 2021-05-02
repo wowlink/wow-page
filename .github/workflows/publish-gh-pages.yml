@@ -16,13 +16,11 @@ jobs:
           org: "wowlink"
           registry: "npm.pkg.github.com"
           token: ${{ secrets.GH_NPM_DOWNLOAD_TOKEN }}
-      - name: Prepare deployment
-        run: npm install && npm test
+      - run: npm install && npm test
       - name: Reconfigure git
         run: |
           git config --global user.email "tianhaoz@umich.edu"
           git config --global user.name "Tianhao Zhou"
           git remote rm origin
           git remote add origin https://tianhaoz95:${{ secrets.GITHUB_TOKEN }}@github.com/wowlink/wow-page.git
-      - name: Build and push to GitHub pages branch
-        run: npm run deploy
+      - run: npm run deploy

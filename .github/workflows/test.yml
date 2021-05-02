@@ -13,7 +13,5 @@ jobs:
           org: "wowlink"
           registry: "npm.pkg.github.com"
           token: ${{ secrets.GH_NPM_DOWNLOAD_TOKEN }}
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: npm test
+      - run: npm install
+      - run: npm test
