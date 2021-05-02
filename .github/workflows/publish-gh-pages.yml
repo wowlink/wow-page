@@ -11,12 +11,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
-      - name: Generate GitHub registry credential file
-        run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_NPM_DOWNLOAD_TOKEN }}" > .npmrc
-          echo "@wowlink:registry=https://npm.pkg.github.com" >> .npmrc
-      - name: Install dependencies
-        run: npm install
+      - uses: tianhaoz95-actions/dot-npmrc@v1.0.0
+        with:
+          org: "wowlink"
+          registry: "npm.pkg.github.com"
+          token: ${{ secrets.GH_NPM_DOWNLOAD_TOKEN }}
+      - name: Prepare deployment
+        run: npm install && npm test
       - name: Reconfigure git
         run: |
           git config --global user.email "tianhaoz@umich.edu"
