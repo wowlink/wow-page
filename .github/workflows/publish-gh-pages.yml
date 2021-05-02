@@ -11,8 +11,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
-      - name: Generate GitHub registry credential file
-        uses: tianhaoz95-actions/dot-npmrc@v1.0.0
+      - uses: tianhaoz95-actions/dot-npmrc@v1.0.0
         with:
           org: "wowlink"
           registry: "npm.pkg.github.com"
