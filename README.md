@@ -1,3 +1,2 @@
 # WOW Page
 
-## Available Scripts
