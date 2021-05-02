@@ -16,8 +16,8 @@ jobs:
           org: "wowlink"
           registry: "npm.pkg.github.com"
           token: ${{ secrets.GH_NPM_DOWNLOAD_TOKEN }}
-      - name: Install dependencies
-        run: npm install
+      - name: Prepare deployment
+        run: npm install && npm test
       - name: Reconfigure git
         run: |
           git config --global user.email "tianhaoz@umich.edu"
