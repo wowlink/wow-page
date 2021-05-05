@@ -8,7 +8,7 @@ registries:
   npm-github:
     type: npm-registry
     url: https://npm.pkg.github.com
-    token: ${{secrets.GH_NPM_TOKEN}}
+    token: ${{ secrets.GH_NPM_DOWNLOAD_TOKEN }}
 updates:
   - package-ecosystem: "npm"
     directory: "/"
