@@ -1,0 +1,23 @@
+name: Run Pull Request Checks
+on: pull_request_target
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - uses: tianhaoz95-actions/dot-npmrc@v1.2.1
+        with:
+          org: "wowlink"
+          token: ${{ secrets.GH_NPM_DOWNLOAD_TOKEN }}
+      - run: npm install && npm test
+  auto-approve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hmarr/auto-approve-action@v2
+        if: github.actor == 'dependabot[bot]'
+        with:
+          github-token: "${{ secrets.GH_REPO_ACCESS_TOKEN }}"
