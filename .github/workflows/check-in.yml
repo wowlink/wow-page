@@ -1,5 +1,7 @@
 name: Check In
-on: pull_request_target
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, labeled]
 jobs:
   run-test:
     runs-on: ubuntu-latest
