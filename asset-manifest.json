@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/wow-page/static/css/main.25122b0a.chunk.css",
-    "main.js": "/wow-page/static/js/main.b61d0e68.chunk.js",
-    "main.js.map": "/wow-page/static/js/main.b61d0e68.chunk.js.map",
-    "runtime~main.js": "/wow-page/static/js/runtime~main.27017b8f.js",
-    "runtime~main.js.map": "/wow-page/static/js/runtime~main.27017b8f.js.map",
-    "static/js/2.f18e4220.chunk.js": "/wow-page/static/js/2.f18e4220.chunk.js",
-    "static/js/2.f18e4220.chunk.js.map": "/wow-page/static/js/2.f18e4220.chunk.js.map",
-    "static/js/3.f7e15c81.chunk.js": "/wow-page/static/js/3.f7e15c81.chunk.js",
-    "static/js/3.f7e15c81.chunk.js.map": "/wow-page/static/js/3.f7e15c81.chunk.js.map",
+    "main.css": "/wow-page/static/css/main.0a671cab.chunk.css",
+    "main.js": "/wow-page/static/js/main.f382e921.chunk.js",
+    "main.js.map": "/wow-page/static/js/main.f382e921.chunk.js.map",
+    "runtime-main.js": "/wow-page/static/js/runtime-main.4c427adc.js",
+    "runtime-main.js.map": "/wow-page/static/js/runtime-main.4c427adc.js.map",
+    "static/js/2.b0ddd085.chunk.js": "/wow-page/static/js/2.b0ddd085.chunk.js",
+    "static/js/2.b0ddd085.chunk.js.map": "/wow-page/static/js/2.b0ddd085.chunk.js.map",
+    "static/js/3.81b8aebf.chunk.js": "/wow-page/static/js/3.81b8aebf.chunk.js",
+    "static/js/3.81b8aebf.chunk.js.map": "/wow-page/static/js/3.81b8aebf.chunk.js.map",
     "index.html": "/wow-page/index.html",
-    "precache-manifest.c51a3637bb7514840603f53cf6b91e62.js": "/wow-page/precache-manifest.c51a3637bb7514840603f53cf6b91e62.js",
-    "service-worker.js": "/wow-page/service-worker.js",
-    "static/css/main.25122b0a.chunk.css.map": "/wow-page/static/css/main.25122b0a.chunk.css.map",
-    "static/media/logo.svg": "/wow-page/static/media/logo.06e73328.svg"
-  }
+    "static/css/main.0a671cab.chunk.css.map": "/wow-page/static/css/main.0a671cab.chunk.css.map",
+    "static/js/2.b0ddd085.chunk.js.LICENSE.txt": "/wow-page/static/js/2.b0ddd085.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/wow-page/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c427adc.js",
+    "static/js/2.b0ddd085.chunk.js",
+    "static/css/main.0a671cab.chunk.css",
+    "static/js/main.f382e921.chunk.js"
+  ]
 }
