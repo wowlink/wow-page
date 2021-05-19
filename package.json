@@ -5,7 +5,7 @@
   "homepage": "https://wowlink.github.io/wow-page",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
+    "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^13.1.9",
     "@types/jest": "^26.0.22",
     "@types/node": "^15.3.0",
