@@ -35,6 +35,8 @@ const Home = (): JSX.Element => {
   const githubUserOr = query.get("gh_user");
   const githubUser: string = githubUserOr ? githubUserOr : "wowlink";
   const githubRepoOr = query.get("gh_repo");
+  const githubConfigFilenameOr = query.get("gh_config_filename");
+  const githubConfigFilename: string = githubConfigFilenameOr ? githubConfigFilenameOr : "config.yaml";
   const githubRepo: string = githubRepoOr ? githubRepoOr : "default-profile";
   const [progress, setProgress] = useState({ msg: "initiation" });
   const [suggestions, setSuggestions] = useState<WowUrlRankingItem[]>([]);
@@ -44,7 +46,8 @@ const Home = (): JSX.Element => {
       setProgress({ msg: "fetching WowLink lookup 💤💤💤" });
       const fetcher_config: WowLookupFetcherConfig = {
         githubUser: githubUser,
-        githubRepository: githubRepo
+        githubRepository: githubRepo,
+        githubConfigFilename: githubConfigFilename,
       };
       const fetcher: WowLookupFetcher = WowLookupFetcherFactory(
         BuiltInLookupFetcherType.GitHub, fetcher_config);
