@@ -79,7 +79,7 @@ const Home = (): JSX.Element => {
       return;
     }
     convertAndRedirect();
-  }, [wowlink, devMode, githubUser, githubRepo]);
+  }, [wowlink, devMode, githubUser, githubRepo, githubConfigFilename]);
 
   return (
     <div className="App">
