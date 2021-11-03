@@ -10,7 +10,7 @@
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
+    "@types/react-dom": "^17.0.11",
     "@wowlink/wow-interface": "^1.4.1",
     "@wowlink/wow-lookup-fetcher": "^1.1.0",
     "@wowlink/wow-url-converter": "^1.2.1",
