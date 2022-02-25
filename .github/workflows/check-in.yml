@@ -8,7 +8,7 @@ jobs:
     if: github.actor == 'dependabot[bot]' || contains(github.event.pull_request.labels.*.name, 'safe to test')
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: "14"
       - uses: tianhaoz95-actions/dot-npmrc@v1.2.1
